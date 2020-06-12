@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+  name = AUTHORNAME
+  email = AUTHOREMAIL
+
+[alias]
+  promote = !$DFH/bin/git-promote
+  unstage = !git reset --
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
