@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+#
+# Remove files from tmp and Downloads after 7 days
+#
+# Install with crontab to run daily. For example, daily at 10pm:
+#
+# crontab -e
+# 0 22 * * * * /Users/jhubert/.dotfiles/bin/trash-day
+#
+folders_to_purge=('/Users/jhubert/tmp' '/Users/jhubert/Downloads')
+total_file_count=0
+
+for folder in $folders_to_purge; do
+  file_count=`find $folder -atime +7 | wc -l | awk '{$1=$1};1'`
+  let "total_file_count = $total_file_count + $file_count"
+
+  find $folder -atime +7 -exec trash -F -- '{}' +
+done
+
+osascript -e "display notification \"Trashed $total_file_count file(s) from tmp and Downloads\" with title \"Trash Day\""
