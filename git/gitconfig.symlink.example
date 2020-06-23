@@ -6,6 +6,8 @@
 [alias]
   promote = !$DFH/bin/git-promote
   unstage = !git reset --
+  prp = pull-request -p
+  new = !git init && git symbolic-ref HEAD refs/heads/main
 
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
