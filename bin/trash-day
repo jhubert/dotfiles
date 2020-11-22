@@ -7,7 +7,7 @@
 # crontab -e
 # 0 22 * * * * /Users/jhubert/.dotfiles/bin/trash-day
 #
-folders_to_purge=('/Users/jhubert/tmp' '/Users/jhubert/Downloads')
+folders_to_purge=('/Users/jhubert/tmp/')
 total_file_count=0
 
 for folder in $folders_to_purge; do

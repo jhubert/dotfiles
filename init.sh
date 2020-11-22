@@ -1,14 +1,19 @@
+export DFH=/Users/jhubert/.dotfiles
+
 # Shell
-source /Users/jhubert/.dotfiles/shell/aliases.sh
-source /Users/jhubert/.dotfiles/shell/config.sh
+source $DFH/shell/aliases.sh
+source $DFH/shell/config.sh
+
+# Homebrew
+source $DFH/homebrew/shell.sh
 
 # Git
-source /Users/jhubert/.dotfiles/git/aliases.sh
-source /Users/jhubert/.dotfiles/git/git-prompt.sh
+source $DFH/git/aliases.sh
+source $DFH/git/git-prompt.sh
 
 # Ruby
-source /Users/jhubert/.dotfiles/ruby/aliases.sh
-source /Users/jhubert/.dotfiles/ruby/shell.sh
+source $DFH/ruby/aliases.sh
+source $DFH/ruby/shell.sh
 
 # Z - Quick folder navigation helper
-source /Users/jhubert/.dotfiles/z/z.sh
+source $DFH/z/z.sh
