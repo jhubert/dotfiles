@@ -3,6 +3,7 @@ export DFH=/Users/jhubert/.dotfiles
 # Shell
 source $DFH/shell/aliases.sh
 source $DFH/shell/config.sh
+source $DFH/shell/functions.sh
 
 # Homebrew
 source $DFH/homebrew/shell.sh
